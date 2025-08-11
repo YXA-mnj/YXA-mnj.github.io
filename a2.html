@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开发者启航 - 编程学习路线</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 保持之前的所有样式不变 */
+        /* 仅添加新样式 */
+        
+        .learning-path {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            padding: 25px;
+            margin: 25px 0;
+            transition: all 0.3s ease;
+        }
+        [data-theme="dark"] .learning-path {
+            background: #34495e;
+        }
+        .path-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--secondary);
+        }
+        .timeline {
+            display: flex;
+            margin: 30px 0;
+            overflow-x: auto;
+            padding-bottom: 15px;
+        }
+        .phase {
+            min-width: 250px;
+            padding: 20px;
+            border-radius: 10px;
+            background: #f8f9fa;
+            margin-right: 20px;
+            border-left: 4px solid var(--secondary);
+        }
+        [data-theme="dark"] .phase {
+            background: #2c3e50;
+        }
+        .phase h4 {
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+        .phase ul {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+        .phase li {
+            margin-bottom: 8px;
+            font-size: 0.9em;
+        }
+        .algorithm-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .algorithm-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 1px solid #ddd;
+        }
+        [data-theme="dark"] .algorithm-card {
+            background: #2c3e50;
+            border-color: #46637f;
+        }
+        .algorithm-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-color: var(--secondary);
+        }
+        .algorithm-card h5 {
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+        .priority-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            background: var(--accent);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.8em;
+            margin-top: 10px;
+        }
+        .practice-tip {
+            background: rgba(46, 204, 113, 0.1);
+            border-left: 4px solid var(--success);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        [data-theme="dark"] .practice-tip {
+            background: rgba(39, 174, 96, 0.15);
+        }
+    </style>
+</head>
+<body data-theme="light">
+    <!-- 头部保持不变 -->
+    
+    <main>
+        <!-- 新增C++学习路线部分 -->
+        <section id="cpp-path">
+            <h2><i class="fab fa-cuttlefish"></i> C++ 系统学习路线</h2>
+            
+            <div class="learning-path">
+                <div class="path-header">
+                    <h3>从零基础到算法高手的学习路径</h3>
+                    <span class="badge">推荐路线</span>
+                </div>
+                
+                <!-- 学习阶段时间线 -->
+                <div class="timeline">
+                    <div class="phase">
+                        <h4>阶段1：基础语法 (1个月)</h4>
+                        <ul>
+                            <li>输入输出、注释、变量常量</li>
+                            <li>数据类型与运算符</li>
+                            <li>流程控制语句</li>
+                            <li>数组与函数</li>
+                            <li>指针与内存管理</li>
+                        </ul>
+                        <p class="priority-badge">核心基础</p>
+                    </div>
+                    
+                    <div class="phase">
+                        <h4>阶段2：面向对象 (2-3周)</h4>
+                        <ul>
+                            <li>类与对象概念</li>
+                            <li>构造/析构函数</li>
+                            <li>运算符重载</li>
+                            <li>继承与多态</li>
+                            <li>虚函数与抽象类</li>
+                        </ul>
+                        <p class="priority-badge">编程思想</p>
+                    </div>
+                    
+                    <div class="phase">
+                        <h4>阶段3：STL标准库 (2周)</h4>
+                        <ul>
+                            <li>vector/string/list</li>
+                            <li>stack/queue</li>
+                            <li>set/map</li>
+                            <li>unordered_set/map</li>
+                            <li>函数模板</li>
+                        </ul>
+                        <p class="priority-badge">实用工具</p>
+                    </div>
+                    
+                    <div class="phase">
+                        <h4>阶段4：数据结构 (3-4周)</h4>
+                        <ul>
+                            <li>链表/栈/队列</li>
+                            <li>树/二叉树/BST</li>
+                            <li>图的概念与存储</li>
+                            <li>邻接矩阵/邻接表</li>
+                            <li>哈希表实现</li>
+                        </ul>
+                        <p class="priority-badge">重点掌握</p>
+                    </div>
+                    
+                    <div class="phase">
+                        <h4>阶段5：算法 (持续练习)</h4>
+                        <ul>
+                            <li>枚举与排序</li>
+                            <li>贪心与模拟</li>
+                            <li>二分查找</li>
+                            <li>动态规划</li>
+                            <li>图论算法</li>
+                        </ul>
+                        <p class="priority-badge">面试重点</p>
+                    </div>
+                </div>
+                
+                <!-- 算法重点 -->
+                <h4><i class="fas fa-brain"></i> 算法专项训练重点</h4>
+                <div class="algorithm-grid">
+                    <div class="algorithm-card">
+                        <h5>枚举与排序</h5>
+                        <p>基础算法，务必掌握</p>
+                        <span class="priority-badge">重点1</span>
+                    </div>
+                    <div class="algorithm-card">
+                        <h5>模拟与贪心</h5>
+                        <p>常见问题解决方案</p>
+                        <span class="priority-badge">重点2</span>
+                    </div>
+                    <div class="algorithm-card">
+                        <h5>二分查找</h5>
+                        <p>高效搜索算法</p>
+                        <span class="priority-badge">重点3</span>
+                    </div>
+                    <div class="algorithm-card">
+                        <h5>前缀和与差分</h5>
+                        <p>数组高效处理技巧</p>
+                        <span class="priority-badge">重点4</span>
+                    </div>
+                    <div class="algorithm-card">
+                        <h5>滑动窗口与双指针</h5>
+                        <p>数组/字符串处理</p>
+                        <span class="priority-badge">重点5</span>
+                    </div>
+                    <div class="algorithm-card">
+                        <h5>DFS与BFS</h5>
+                        <p>图论基础算法</p>
+                        <span class="priority-badge">重点6</span>
+                    </div>
+                    <div class="algorithm-card">
+                        <h5>动态规划</h5>
+                        <p>面试高频考点</p>
+                        <span class="priority-badge">重点7</span>
+                    </div>
+                </div>
+                
+                <!-- 学习建议 -->
+                <div class="practice-tip">
+                    <h4><i class="fas fa-check-circle"></i> 学习实践建议：</h4>
+                    <ul>
+                        <li><strong>务必自己能写出来</strong> - 每个算法都要亲手实现</li>
+                        <li><strong>着重刷核心算法</strong> - 优先掌握枚举、排序、贪心、二分等基础算法</li>
+                        <li><strong>大量练习通用组件</strong> - 熟练使用STL容器</li>
+                        <li><strong>理解底层原理</strong> - 特别是面向对象特性和数据结构实现</li>
+                        <li><strong>每日算法练习</strong> - 坚持每天解决1-2道算法题</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 其他部分保持不变 -->
+    </main>
+    
+    <!-- 底部保持不变 -->
+    
+    <script>
+        // 保持之前的脚本不变
+        // 新增：学习阶段导航
+        document.querySelectorAll('.phase').forEach((phase, index) => {
+            phase.addEventListener('click', () => {
+                alert(`进入阶段${index + 1}学习：${phase.querySelector('h4').textContent}`);
+            });
+        });
+    </script>
+</body>
+</html>
